@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "skills": {
+    "ai-seo": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/ai-seo/SKILL.md",
+      "computedHash": "c55f45e5100e0ed83feaa89add9a765c010bd8adbfdf4c33865c014fccdd3618",
+      "installMode": "copy"
+    },
+    "animate": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/animate/SKILL.md",
+      "computedHash": "f76ddd3d4446c3c56a143ea98650c370b3e8f88e6203d1e22082d2082bf1eed7",
+      "installMode": "copy"
+    },
+    "emil-design-eng": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/emil-design-eng/SKILL.md",
+      "computedHash": "2483020b5bbaab030d6b3463bfba49c8d9c2cd8dea4d9fba836dbd471f1fb706",
+      "installMode": "copy"
+    },
+    "fortify-development": {
+      "source": "./.claude/skills",
+      "sourceType": "local",
+      "computedHash": "403a6b2e1ea6b8bd45d139d8aecd0dc29413bc8bf6a12d730f32c7d45e6b9949",
+      "installMode": "copy"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "89496d5dd00f4810205f351759594fc2742bf8eea85a2f2b2d1de59f4bd91576",
+      "installMode": "copy"
+    },
+    "improve-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/improve-animations/SKILL.md",
+      "computedHash": "f6652a3bb94950baa33c684cc0966c838eb65cf22ebb5769a4f51ea205c254fe",
+      "installMode": "copy"
+    },
+    "inertia-vue-development": {
+      "source": "./.claude/skills",
+      "sourceType": "local",
+      "computedHash": "a21a596a4ae29cad0ee1596f43d19f992fd20ffcb8681b9d3902b7cdc03bea3f",
+      "installMode": "copy"
+    },
+    "infer-conventions": {
+      "source": "./.claude/skills",
+      "sourceType": "local",
+      "computedHash": "48ae473da0a37a3255121ccc15f43fe7572b6a2a63390e371882e245ae721d1a",
+      "installMode": "copy"
+    },
+    "laravel-best-practices": {
+      "source": "./.claude/skills",
+      "sourceType": "local",
+      "computedHash": "4ce03cc1a693e8796911d4233fee2c42453cbc117ced4263323ba0f8c064ed6c",
+      "installMode": "copy"
+    },
+    "performance": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/performance/SKILL.md",
+      "computedHash": "ce9d36f139a1b2a6a8ac2cb222698963b8076d2dd8b41685e8e8ae589cdcf1e4",
+      "installMode": "copy"
+    },
+    "playwright-best-practices": {
+      "source": "currents-dev/playwright-best-practices-skill",
+      "sourceType": "github",
+      "skillPath": "playwright-best-practices/SKILL.md",
+      "computedHash": "7eb144f734450fee649dc1d209114775ddda07cbf45be84fe969d3d4f3971dce",
+      "installMode": "copy"
+    },
+    "review-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/review-animations/SKILL.md",
+      "computedHash": "b1aca2c16876b8f00e2a1eb161714e63ec41099269d5f95c2f307230749b9dcd",
+      "installMode": "copy"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "computedHash": "9a94c66cb3098b03037f072b6f561cca75410c6d8611e50646baf9e8a5dabe8f",
+      "installMode": "copy"
+    },
+    "spatie-laravel-php": {
+      "source": "spatie/guidelines-skills",
+      "sourceType": "github",
+      "skillPath": "resources/boost/skills/spatie-laravel-php/SKILL.md",
+      "computedHash": "970afa735d56e29328d9421d91a9b02d2e424c79be15d9b7fa1c26da46ac5075",
+      "installMode": "copy"
+    },
+    "tailwindcss-development": {
+      "source": "./.claude/skills",
+      "sourceType": "local",
+      "computedHash": "ef4bfbf471c195dcd2c4922e735ed19a7e60bee6634d98e0eed1e6931bb158cf",
+      "installMode": "copy"
+    },
+    "testing-best-practices": {
+      "source": "./.claude/skills",
+      "sourceType": "local",
+      "computedHash": "a4d45f9ed7753032f910737654b712074bf4bf822498755e9ee50237788374d5",
+      "installMode": "copy"
+    },
+    "wayfinder-development": {
+      "source": "./.claude/skills",
+      "sourceType": "local",
+      "computedHash": "53d0528bac62acc95cdef049fb4d1290cc7a4357a308f17150e0aa2d6b5a7ee8",
+      "installMode": "copy"
+    },
+    "web-quality-audit": {
+      "source": "addyosmani/web-quality-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-quality-audit/SKILL.md",
+      "computedHash": "9be796fc70ff05cf9842327d234b019376dc1abad8d7e3c4e3ea2dab8d8d3deb",
+      "installMode": "copy"
+    }
+  }
+}
