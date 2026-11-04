@@ -46,7 +46,9 @@ const navigation = computed(() => ['services', 'ai', 'cases', 'about', 'blog']);
         </Head>
 
         <header class="site-header">
-            <Link :href="routeUrl('home')" class="site-logo"><LogoMark /></Link>
+            <Link :href="routeUrl('home')" class="site-logo">
+                <LogoMark wordmark="AiON" background="dark" />
+            </Link>
             <nav class="desktop-nav" aria-label="Primary navigation">
                 <Link
                     v-for="key in navigation"

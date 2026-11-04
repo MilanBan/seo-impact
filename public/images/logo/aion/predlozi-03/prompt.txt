@@ -1,0 +1,10 @@
+Generated with the built-in image_gen tool.
+
+Use case: logo-brand / precise logo revision.
+Input 1 is the typography and emblem reference: blue double-chevron triangular emblem, then the word Aion with a glowing blue dot above lowercase i.
+Input 2 is ONLY the reference for the stronger electric-blue glow around the triangular A. Ignore its damaged/noisy white lettering and alpha artifacts.
+Create ONE refined revised logo on a solid very dark midnight navy background.
+The requested exact structure is: blue triangular emblem + lowercase "ion". The emblem REPLACES the capital A, so the result reads "Aion". Absolutely no additional typographic A, and no gap separating an icon from a wordmark. This is one unified word.
+Preserve the refined, relatively light white lowercase i, o, n typography from reference 1. Natural compact optical kerning. Give the lowercase i a luminous circular icy cyan dot with a vivid neon blue halo, clearly separated above its white stem. Emblem and letters share a baseline. Emblem top aligns approximately with the top of the i's dot, lowercase o and n naturally lower.
+The blue A emblem preserves the original angular double-chevron shape and tiny luminous circular point inside. Make the A itself luminous electric blue with bright edges and a substantial soft blue radiance surrounding its silhouette, inspired by reference 2. Rich blue luminous glow, yet the angular shape stays crisp and immediately recognizable. Smooth bloom, no messy speckles or grain. White ion letters remain clean and readable.
+Wide horizontal composition, logo centered and filling about 60% of width. Plain opaque dark navy background, ample margins so the blue glow isn't cut off. No labels, captions, extra graphics, texture, mockups, borders or additional logos. One polished presentation image.
