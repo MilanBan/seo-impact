@@ -1,0 +1,115 @@
+VERZIJA V5 — PREGLEDAN I ISPRAVLJEN PROMPT ZA OBRT OD 8 SEKUNDI
+
+Koristi isključivo ovaj par:
+Slika: public/images/brand/hero-globe-v5-loop.png
+Prompt: docs/hero-globe-flow-v5-prompt.txt
+Stari v4 prompt traži mali pomak od 5° i nije namenjen ovom postupku.
+
+PODEŠAVANJE U FLOW
+
+1. Otvori donje dugme sa Video / rezolucijom / trajanjem.
+2. Izaberi Video, pa Frames, format 16:9, trajanje 8s, jedan rezultat (x1).
+3. Postavi hero-globe-v5-loop.png u Add start frame.
+4. Postavi ISTI FAJL hero-globe-v5-loop.png i u Add end frame.
+   Koristi isti krop u oba polja; ne koristi dve različite verzije slike.
+5. Ukloni prethodni tekst i nalepi ceo hero-globe-flow-v5-prompt.txt.
+   Ne dodaj prethodni zahtev za sporu rotaciju od 5°.
+6. Generiši. Ako izabrani model ne podržava oba kadra, izaberi model
+   koji ih podržava među opcijama dostupnim na tvom nalogu.
+
+ŠTA JE PROMENJENO NA SLICI
+
+Nova slika je dorađena ugrađenim imagegen alatom. Zemlja ima diskretnu
+geografsku mrežu koja čini položaj severnog pola ulevo čitljivijim i
+odvaja ga od vertikalnog svetlosnog snopa. Ciljni projektovani nagib
+za ovu ilustrativnu kompoziciju je 23,4° ulevo od vertikale slike.
+Fizički nagib Zemlje od približno 23,4° inače se meri prema normali
+orbitalne ravni; ugao u ravni slike zavisi od pogleda kamere.
+Ovo je generisana ilustracija, ne geometrijski kalibrisan 3D model.
+Tačan ugao nije moguće garantovati samom generacijom rasterske slike.
+Ispravljeni prompt zato daje prednost osi prikazanoj na slici: oko 23,4°
+je opis ciljanog izgleda, ne zahtev da Flow naknadno prepravlja njen nagib.
+
+PONOVNA ANALIZA DOSTAVLJENOG VIDEA
+
+Izvor: Animate_image_into_website_backg…_3fe5bc59.mp4
+Video: 1280 x 720, 24 fps, 190 kadrova, video-traka oko 7,917 s.
+Kontejner ima i zvučnu traku, ukupno oko 7,93 s.
+Pregledani su kadrovi u intervalima od 0,5 s tokom celog klipa,
+detalji glavnog snopa u intervalima od 1/6 s tokom prve dve sekunde,
+detalji tla i prvi/poslednji kadar.
+
+- Zemlja: Evropa/Afrika pomeraju se prema desnom obodu; u kadar ulaze
+  Atlantik i Severna Amerika. To je delimičan, ne pun obrt. Nije jasno
+  ostvaren traženi nagib. Tačan 3D ugao ne može se izmeriti iz ovog pregleda.
+- Snop: svetli vertikalni kanal i izraženi paketi svetlosti menjaju položaj
+  i sjaj. Na početku se vidi spuštanje istaknutih paketa; kasnije se
+  njihov oblik razlaže i smer nije svuda podjednako čitljiv.
+- Stubovi podataka: segmenti menjaju intenzitet i raspored, uz svetle
+  tačke na osnovama. Nije pokazano ponavljanje istog stanja na kraju.
+- Čestice: plave tačke i mekši svetlosni tragovi menjaju raspored;
+  pojavljuju se i krupniji zamućeni oblici u prednjem planu. Njihovo
+  kretanje iz ovih kadrova nije moguće svesti na jedan pouzdan smer.
+- Tlo: sijaju putanje i tačke mreže, menjaju se odsjaji. S-putanja
+  menja vidljiv oblik/položaj tokom klipa, umesto da se samo svetlost
+  kreće po fiksnoj putanji. Novi prompt izričito fiksira njenu geometriju.
+- Kadar: nema velikog pomeranja kamere; finu generativnu deformaciju
+  nije moguće potpuno razdvojiti od malog pomeranja perspektive.
+- Početak/kraj: razlikuju se geografija, čestice i svetlosni detalji.
+  Samo pretapanje zato ne može ispraviti celu animaciju.
+
+NOVI CIKLUSI
+
+Zemlja: jedan obrt za 8 s, 45°/s, stalna brzina i fiksna nagnuta osa.
+Glavni snop: impulsi nadole, vertikalan snop i fiksno mesto kontakta.
+Svetlost po tlu: ka Zemlji, uz nepomične putanje.
+Tanke kolone i čestice: nagore, iz fiksnih izvora, bez nagomilavanja.
+Svi svetlosni efekti zajedno imaju ponovljiv obrazac od osam sekundi.
+Nema dodatnog zahteva da se svaki efekat ponavlja već svake dve sekunde.
+Svaki odsjaj prati svoj izvor, uključujući rotirajuću Zemlju. Zbirno stanje
+odsjaja ponavlja se sa celom scenom, bez pomeranja reflektujućeg tla.
+Pozadina i atmosferski rub ostaju mirni.
+Na granici petlje poklapaju se izgled i brzina/smer kretanja; ne sledi reset.
+Ovo su zahtevi novog prompta, ne izmereni periodi starog videa.
+
+OBAVEZNA PROVERA PRE USPORAVANJA
+
+1. Na 0/2/4/6/8 s ugaoni pomak je 0/90/180/270/360°. Očekivani
+   približni geografski sled je Evropa-Afrika / Amerike / Pacifik /
+   Azija-Australija / početni pogled. Tačna vidljivost zavisi od početne
+   perspektive i zaklanjanja tlom; kontinenti ne smeju da se pomeraju
+   nezavisno da bi se namestili u ove kontrolne poglede.
+2. Severni pol ostaje na istom mestu ulevo od snopa tokom celog obrta.
+3. Geografska mreža i kontinenti rotiraju zajedno; nema deformisanja.
+4. Snop ostaje vertikalan, impulsi u njemu idu nadole; fini tokovi nagore.
+5. Oblik tla i S-putanje je nepomičan.
+6. Nema usporavanja pred kraj, zamrzavanja, vraćanja ili preskoka geografije.
+7. Pusti tri kopije klipa uzastopno bez prelaza. Pregledaj oba spoja.
+   Podudaranje dve statične slike ne dokazuje kontinuitet kretanja.
+
+OGRANIČENJE
+
+Prompt precizira sve prepoznate slojeve, smerove i ciljane periode,
+ali Flow nije deterministički animator i ne garantuje pridržavanje.
+Isti početni i završni kadar ne garantuju pun obrt ni kontinuitet brzine.
+Ova isporuka nije već verifikovan video-loop. Novi video treba pregledati.
+Ako model preskoči kontinente, uspravi osu ili uspori na kraju, rezultat
+ne zadovoljava zahtev i usporavanje u CapCut-u neće otkloniti taj problem.
+
+CAPCUT — TEK NAKON PROVERE NOVOG VIDEA
+
+Prvo probaj stalnu brzinu 0,25x: nominalnih 8 s postaje oko 32 s.
+Koristi Smooth slow-mo / Optical flow ako je dostupno u tvojoj verziji.
+Na snimku od 24 fps, 0,25x daje samo 6 izvornih kadrova u sekundi,
+pa interpolacija može pomoći, ali može deformisati obale i tanke linije.
+Brzina 0,1x daje oko 80 s, uz znatno veći zahtev za interpolacijom.
+Usporavaju se svi efekti, ne samo Zemlja. Isključi zvučnu traku.
+Ako interpolacija naruši spoj, proveri eksport sa više uzastopnih kopija
+i izdvoji jednu srednju petlju po preciznim granicama; ponovo proveri spoj.
+
+REFERENCE
+
+https://support.google.com/flow/answer/16353334?co=GENIE.Platform%3DDesktop&hl=en-GB
+https://pwg.gsfc.nasa.gov/stargaze/Srotfram.htm
+https://science.nasa.gov/science-research/earth-science/climate-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/
+https://www.capcut.com/resource/how-to-do-slow-motion-on-capcut

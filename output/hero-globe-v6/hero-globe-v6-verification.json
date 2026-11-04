@@ -1,0 +1,33 @@
+{
+  "renderer": "analytic 3D sphere, orthographic projection",
+  "size": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "duration_seconds": 32,
+  "frames": 960,
+  "axis_camera_space": [
+    -0.39714789063478056,
+    0.8624072494473706,
+    0.31389056861423065
+  ],
+  "physical_obliquity_degrees": 23.400000000000002,
+  "orbital_normal_camera_space": [
+    0.0,
+    0.9396926207859084,
+    0.3420201433256687
+  ],
+  "axis_projected_left_tilt_degrees": 24.72658304147876,
+  "camera_latitude_degrees": 20,
+  "earth_rotation_degrees": 360,
+  "degrees_per_second": 11.25,
+  "initial_landmark_moves_right": true,
+  "phase_zero_equals_phase_one": true,
+  "endpoint_max_channel_difference": 0,
+  "wrap_adjacent_mean_difference": 0.8571712374687195,
+  "next_adjacent_mean_difference": 0.8611011505126953,
+  "wrap_to_next_difference_ratio": 0.9954361915588379,
+  "sampling": "frames n=0..N-1 at phase n/N; endpoint N is NOT duplicated",
+  "effects": "fixed seed; integer phase cycles; faded particle recycling"
+}

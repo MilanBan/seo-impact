@@ -1,0 +1,65 @@
+PRIPREMA ZA GOOGLE FLOW
+
+Početna slika: public/images/brand/hero-globe-v4-flow.png
+Prompt: docs/hero-globe-flow-prompt.txt
+Original: public/images/brand/hero-globe-v3.png (sačuvan).
+Slika je dorađena ugrađenim imagegen alatom.
+
+1. U Flow izaberi kreiranje videa iz kadrova (Frames to Video / Frames).
+2. Postavi hero-globe-v4-flow.png kao početni kadar (start frame).
+3. Izaberi odnos 16:9 i trajanje 8 sekundi u modelu koji podržava te opcije.
+   Sačuvaj punu širinu kompozicije pri eventualnom minimalnom kropovanju.
+   Ako je dostupno, izaberi izlaz 1080p. Ne uključuj pokrete kamere.
+4. Kopiraj ceo sadržaj hero-globe-flow-prompt.txt u polje za prompt.
+5. Ne postavljaj identičnu sliku kao završni kadar. Generiši i pregledaj klip.
+6. Za pozadinu sajta koristi video bez zvučne trake, čak i ako model
+   generiše zvuk uprkos instrukciji „No audio”.
+
+PROVERA GENERISANOG VIDEA
+
+- Kamera, centar i veličina Zemlje ostaju nepomični.
+- Zemlja se okreće kontinuirano zapad–istok oko geografske ose;
+  gledano iznad severnog pola, to je suprotno kazaljci sata.
+  Ta odrednica ne znači da cela slika treba da se rotira u ravni ekrana.
+- Cilj je približno 5° tokom 8 sekundi, bez ubrzavanja i vraćanja unazad.
+- Kontinenti i gradska svetla ostaju vezani za sfernu površinu,
+  bez rastezanja, menjanja oblika, njihanja ili promene ose.
+- Fizički nagib od oko 23,4° odnosi se na normalu orbitalne ravni.
+  Projekcija u ovom ilustrativnom kadru nije precizno astronomsko merenje.
+  Svetlosni snop nije geografska osa.
+- Svetlosni paketi po tlu idu ka Zemlji; tanki tokovi iz tla i Zemlje idu nagore.
+- Jasno vidljivi impulsi u glavnom snopu idu odozgo nadole, ka Zemlji.
+- Tlo ostaje čvrsto. Refleksije mogu blago reagovati na prolazak svetlosti.
+- Leva strana ostaje tamna i mirna, bez čestica preko prostora za tekst.
+
+SPAJANJE PETLJE U MONTAŽI — NAREDNI KORAK
+
+Spora delimična rotacija prirodno završava drugim položajem kontinenata.
+Identičan prvi i poslednji kadar može navesti model da zaustavi rotaciju
+ili je vrati unazad. Ne koristiti ping-pong reprodukciju.
+
+Početni predlog je ukršteno pretapanje (crossfade) od oko 0,6 sekundi.
+Za izvor od 8 sekundi: na vremensku liniju stavi segment 0,6–8,0 s;
+preko njegovih poslednjih 0,6 s postavi segment izvora 0–0,6 s i povećaj
+njegovu neprozirnost od 0 do 100%. Tako završetak prelazi u trenutak
+izvora 0,6 s, kojim počinje naredno ponavljanje. Dobija se petlja od
+približno 7,4 s. Ne dodavati crni kadar ili fade-to-black.
+
+Pregledaj bar tri ponavljanja pri normalnoj brzini. Proveri duple obrise
+kontinenata, skokove impulsa i promenu svetline. Ako je spoj primetan,
+prvo probaj kraći prelaz od 0,3 s; ako ostaje loš, regeneriši klip sa
+manjim ukupnim pomakom, približno 3° tokom 8 s. Ovo je ublažen spoj,
+a ne fizički neprekinuta puna rotacija. Prompt ne garantuje savršen spoj
+ili preciznu geometriju; odluka zavisi od pregleda generisanog videa.
+
+Ova isporuka sadrži početnu sliku, prompt i uputstvo.
+Video nije generisan, petlja nije montirana i sajt nije menjan.
+
+IZVORI
+
+Flow — kreiranje videa iz početnog kadra:
+https://support.google.com/flow/answer/16353334?co=GENIE.Platform%3DDesktop&hl=en-GB
+NASA — smer rotacije:
+https://pwg.gsfc.nasa.gov/stargaze/Srotfram.htm
+NASA — nagib Zemljine ose:
+https://science.nasa.gov/science-research/earth-science/climate-science/milankovitch-orbital-cycles-and-their-role-in-earths-climate/

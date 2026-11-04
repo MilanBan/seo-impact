@@ -1,0 +1,36 @@
+{
+  "protected_globe_max_pixel_change_before_encoding": 0,
+  "ramp_frames_each_side": 12,
+  "frames": 368,
+  "fps": 24,
+  "seams": {
+    "0": {
+      "beam": {
+        "before_MAE": 11.94629192352295,
+        "after_MAE": 2.0873451232910156
+      },
+      "ground": {
+        "before_MAE": 5.517033576965332,
+        "after_MAE": 0.2635014057159424
+      },
+      "globe": {
+        "before_MAE": 16.320240020751953,
+        "after_MAE": 16.32004737854004
+      }
+    },
+    "184": {
+      "beam": {
+        "before_MAE": 11.949894905090332,
+        "after_MAE": 2.6050527095794678
+      },
+      "ground": {
+        "before_MAE": 6.235459327697754,
+        "after_MAE": 0.3781120479106903
+      },
+      "globe": {
+        "before_MAE": 8.381402015686035,
+        "after_MAE": 8.38117790222168
+      }
+    }
+  }
+}

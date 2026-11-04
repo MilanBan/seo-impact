@@ -1,0 +1,32 @@
+Pregled dva Flow klipa
+
+Preporuceni probni spoj: joined-matched-loop.mp4
+1280 x 720, 24 fps, 368 kadrova, 15.333 sekunde, bez zvuka.
+
+Redosled:
+1. Rotating_Earth_animation_clip_c1968e49.mp4 (Evropa -> Amerike -> Pacifik)
+2. Earth_rotation_video_clip_genera…_e0ba1823.mp4 (Pacifik -> Azija -> Evropa)
+
+Od svakog izvora zadrzani su kadrovi 0-183, ukupno 184 kadra.
+Uklonjeno je poslednjih sest kadrova svakog izvora. Izvorni fajlovi nisu menjani.
+Kadar 184 izlaznog klipa najbolje je odgovarao kadru 0 sledeceg; rez posle
+183 izbegava njihovo skoro ponavljanje i smanjuje skok geografije.
+
+Nema reprodukcije unazad, interpolacije ni pretapanja u preporucenom spoju.
+joined-direct.mp4 je prvobitni direktni spoj celih klipova.
+joined-soft-loop.mp4 je probno pretapanje sa duplim obrisima kontinenata;
+zbog toga nije preporucena verzija.
+
+Preostali problemi:
+- Impulsi snopa, cestice i odsjaji nisu fazno uskladjeni na spojevima.
+- Intenzitet mreze i izgled cestica menjaju se tokom animacije.
+- Generisani snimci ne dokazuju tacan nagib ose ili konstantnu ugaonu brzinu.
+- Ovo je poboljsan probni spoj, a ne potvrdena neprimetna petlja.
+
+Merenja u analysis.json i matched-analysis.json su proseci apsolutnih razlika
+piksela na umanjenim kadrovima, ne merenja fizicke ugaone brzine.
+Prelaz geografske regije smanjen je sa 13.489 na 7.596 (prvi spoj),
+odnosno sa 16.580 na 9.667 (povratak na pocetak).
+
+Za zavrsnu obradu okoline potrebno je zasebno uskladiti svetlosne efekte.
+Pretapanje celog kadra moze ponovo napraviti duple obrise Zemlje.

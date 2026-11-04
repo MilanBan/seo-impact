@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "duration": "32.000000",
+        "nb_frames": "960"
+      }
+    ],
+    "format": {
+      "duration": "32.000000",
+      "size": "40673421"
+    }
+  },
+  "regions": {
+    "whole_frame": {
+      "wrap_adjacent_MAE": 0.47360965609550476,
+      "neighbor_adjacent_MAE": 0.4216145724058151,
+      "wrap_to_neighbor_ratio": 1.123323734739517
+    },
+    "earth": {
+      "wrap_adjacent_MAE": 3.186495780944824,
+      "neighbor_adjacent_MAE": 3.092920184135437,
+      "wrap_to_neighbor_ratio": 1.0302547725897895
+    },
+    "beam": {
+      "wrap_adjacent_MAE": 1.4139072895050049,
+      "neighbor_adjacent_MAE": 1.1196652054786682,
+      "wrap_to_neighbor_ratio": 1.2627947020114332
+    },
+    "floor": {
+      "wrap_adjacent_MAE": 0.29667189717292786,
+      "neighbor_adjacent_MAE": 0.14543171226978302,
+      "wrap_to_neighbor_ratio": 2.0399395189859746
+    }
+  },
+  "passed": true
+}

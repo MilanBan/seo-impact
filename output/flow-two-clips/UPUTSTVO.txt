@@ -1,0 +1,63 @@
+DVA FLOW KLIPA — USKLAĐENI REFERENTNI KADROVI
+
+A-europe-africa.jpg = korisnikova DRUGA priložena slika, kopirana bez izmene.
+B-pacific.png = novi pacifički kadar pripremljen ugrađenim imagegen alatom.
+
+Korisnikova PRVA slika prikazuje Amerike, ali taj pogled nije 180 stepeni
+udaljen od prikazanog pogleda na Evropu/Afriku. Zato nije upotrebljen kao
+suprotni poluobrt. Tačan ugao između dve izvorne generisane slike nije meren;
+raspored kontinenata pokazuje da nisu precizan par suprotnih orijentacija.
+
+OBA KLIPA: Video > Frames, 16:9, 8s, jedan rezultat.
+Koristi isti model, rezoluciju i isti krop u oba generisanja.
+
+KLIP 1:
+Start = A-europe-africa.jpg
+End = B-pacific.png
+Prompt = clip-1-A-to-B.txt
+Putanja = Evropa/Afrika -> Amerike -> Pacifik.
+
+KLIP 2:
+Start = B-pacific.png
+End = A-europe-africa.jpg
+Prompt = clip-2-B-to-A.txt
+Putanja = Pacifik -> Azija/Indijski okean -> Evropa/Afrika.
+Drugi klip nastavlja ISTI SMER, a ne vraća prethodni klip unazad.
+
+Svaki klip cilja 180° za 8 s, odnosno 22,5°/s.
+Spojeni klipovi imaju nominalno 16 s i zajedno ciljaju jedan obrt od 360°.
+
+PROVERA PRE MONTAŽE
+- U prvom klipu treba da prođu Amerike, a u drugom Azija.
+- Zemljina osa i veličina ostaju stabilni, a geografija ne menja oblik.
+- Glavni snop ide nadole; tanki podaci i čestice nagore.
+- Tlo i svetlosne putanje ne menjaju oblik.
+- Nema ubrzavanja, kočenja ili zaustavljanja na početku/kraju klipova.
+- Uporedi poslednje kadrove klipa 1 sa prvim kadrovima klipa 2.
+- Uporedi poslednje kadrove klipa 2 sa prvim kadrovima klipa 1.
+Isti referentni kadar pomaže izgledu spoja, ali ne garantuje istu brzinu
+i smer svakog efekta pri nezavisnom generisanju dva klipa.
+
+MONTAŽA
+Postavi klip 1, zatim klip 2, bez tranzicije i bez reverse/ping-pong efekta.
+Pusti niz 1 -> 2 -> 1 -> 2 i proveri oba tipa spoja.
+Ako oba klipa sadrže zaista dupliran identičan granični kadar, ukloni
+jedan duplikat samo ako pravi kratko zadržavanje. Ne seci automatski.
+Tek kada oba spoja i puna rotacija prođu pregled, objedini klipove
+i primeni ISTO usporavanje na ceo spojeni video:
+0,5x daje približno 32 s; 0,25x približno 64 s.
+Za interpolaciju koristi Smooth slow-mo/Optical flow ako je dostupno;
+proveri obale, mrežu, čestice i oba spoja i nakon izvoza.
+
+OGRANIČENJA REFERENCI I GENERISANJA
+A i B su ilustrativne reference, ne dva kadra kalibrisanog 3D modela.
+B daje pacifičku stranu kao cilj suprotnog pogleda, ali preciznih 180°
+i potpunu saglasnost projekcije/ose ne treba smatrati matematički potvrđenim.
+Slike imaju istu dimenziju, ali detalji pozadine i odsjaja nisu garantovano
+identični piksel po piksel posle generativne dorade.
+Nezavisni Flow klipovi i dalje mogu promeniti geografiju, ubrzati, zakočiti
+ili dati različito kretanje na spoju. Ovaj postupak daje više vizuelnih
+referenci; ne garantuje savršen loop.
+
+OVDE SU PRIPREMLJENE SLIKE I PROMPTOVI; FLOW VIDEO-KLIPOVI NISU GENERISANI.
+

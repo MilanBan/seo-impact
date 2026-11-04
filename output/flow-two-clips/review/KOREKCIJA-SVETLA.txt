@@ -1,0 +1,24 @@
+Isporuka: joined-lighting-corrected-loop.mp4
+Pregled dva ciklusa: lighting-corrected-preview-2-cycles.mp4
+
+Trajanje jednog ciklusa: 368 kadrova / 24 fps = 15.333 sekunde.
+Rezolucija: 1280 x 720. Bez zvuka. Izvorni fajlovi su sacuvani.
+
+Obrada: lokalni FFmpeg i NumPy/Python, skripta correct_lighting.py.
+Korekcija razlike svetlosnih efekata postepeno se uvodi i uklanja tokom
+12 kadrova sa obe strane svakog spoja. Uobicajeni lokalni pomak svetlosti
+iz susednih kadrova zadrzan je kao cilj razlike na spoju.
+Zemlja i njen obod zasticeni su maskom; maska se omeksava izvan Zemlje.
+Nema pretapanja geografije, ostrenja, interpolacije ili promene brzine.
+Maksimalna promena piksela u potpuno zasticenoj oblasti pre video
+kompresije iznosi 0. Izvoz H.264 CRF 12 moze uneti male kompresione razlike.
+
+Merenja pre kodiranja, prosecna apsolutna razlika piksela na spojevima:
+- Povratak na pocetak: snop 11.95 -> 2.09, tlo 5.52 -> 0.26.
+- Srednji spoj: snop 11.95 -> 2.61, tlo 6.24 -> 0.38.
+Ova merenja pokazuju smanjenje svetlosnog skoka, ne dokazuju neprimetnost.
+
+Proveren je raspored kadrova oko oba spoja i potpuno dekodiranje izvoza.
+U izvoru preostaju razlike geografije/mreze i brzine rotacije; njih ova
+korekcija svetlosti ne menja. Potpuno neprimetan celokupan spoj nije
+garantovan, narocito pri pazljivom posmatranju kontinenata.

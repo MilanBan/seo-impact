@@ -1,0 +1,80 @@
+{
+  "sources": [
+    "/home/linux_mint/Downloads/Rotating_Earth_animation_clip_c1968e49.mp4",
+    "/home/linux_mint/Downloads/Earth_rotation_video_clip_genera\u2026_e0ba1823.mp4"
+  ],
+  "frames": [
+    190,
+    190
+  ],
+  "joins": {
+    "clip1_to_clip2": {
+      "whole": {
+        "seam_MAE": 3.693,
+        "typical_MAE": 1.061,
+        "nearby_MAE": 0.66,
+        "seam_to_typical": 3.48
+      },
+      "earth": {
+        "seam_MAE": 13.489,
+        "typical_MAE": 5.891,
+        "nearby_MAE": 4.578,
+        "seam_to_typical": 2.29
+      },
+      "beam": {
+        "seam_MAE": 16.278,
+        "typical_MAE": 2.76,
+        "nearby_MAE": 2.425,
+        "seam_to_typical": 5.9
+      },
+      "ground": {
+        "seam_MAE": 5.117,
+        "typical_MAE": 0.73,
+        "nearby_MAE": 0.301,
+        "seam_to_typical": 7.01
+      }
+    },
+    "clip2_to_clip1": {
+      "whole": {
+        "seam_MAE": 3.694,
+        "typical_MAE": 1.061,
+        "nearby_MAE": 0.846,
+        "seam_to_typical": 3.48
+      },
+      "earth": {
+        "seam_MAE": 16.58,
+        "typical_MAE": 5.891,
+        "nearby_MAE": 6.65,
+        "seam_to_typical": 2.81
+      },
+      "beam": {
+        "seam_MAE": 13.144,
+        "typical_MAE": 2.76,
+        "nearby_MAE": 1.954,
+        "seam_to_typical": 4.76
+      },
+      "ground": {
+        "seam_MAE": 4.508,
+        "typical_MAE": 0.73,
+        "nearby_MAE": 0.245,
+        "seam_to_typical": 6.18
+      }
+    }
+  },
+  "clip_1_earth_frame_change": {
+    "0-0.5s": 5.966,
+    "0.5-2s": 6.061,
+    "2-4s": 5.571,
+    "4-6s": 5.691,
+    "6-7.5s": 4.811,
+    "7.5-7.875s": 4.667
+  },
+  "clip_2_earth_frame_change": {
+    "0-0.5s": 4.945,
+    "0.5-2s": 5.515,
+    "2-4s": 7.072,
+    "4-6s": 7.55,
+    "6-7.5s": 7.575,
+    "7.5-7.875s": 7.598
+  }
+}

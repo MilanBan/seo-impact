@@ -1,0 +1,28 @@
+Animate the supplied image into a calm, premium website hero background.
+Preserve the composition, dark navy and electric blue palette, globe position,
+globe size, foreground geometry, and empty dark space on the left.
+
+Lock the camera completely. No pan, zoom, orbit, shake, or cuts.
+
+Rotate Earth very slowly and steadily eastward around its geographic
+north–south axis: counterclockwise when viewed from above the North Pole.
+Target approximately five degrees of rotation over eight seconds.
+Preserve the stable axial orientation established in the reference image,
+representing Earth's 23.4-degree obliquity. No wobble, tumbling, reversal,
+or changing tilt. Continents and city lights move together on a rigid sphere.
+Keep the globe's center and its occlusion by the foreground fixed.
+
+Small blue data pulses travel along the existing ground pathways toward
+the globe. Fine luminous data particles rise slowly from the ground and
+from the globe's surface into the space above it. Keep the ground solid
+and stationary, with subtle responsive reflections.
+
+The main overhead beam remains vertical and anchored to the same point
+on the globe's upper silhouette. Clearly visible luminous pulses travel
+DOWNWARD within this beam, from the top edge toward Earth.
+The surrounding fine data streams travel UPWARD, creating two distinct,
+readable directions of motion.
+
+Maintain restrained brightness and smooth continuous movement.
+No flashing, explosions, new objects, text, logos, geography morphing,
+or spreading effects into the empty left side. No audio.

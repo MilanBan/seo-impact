@@ -1,0 +1,38 @@
+{
+  "1-to-2": {
+    "whole": {
+      "matched_seam_MAE": 2.988,
+      "neighbor_MAE": 0.795
+    },
+    "earth": {
+      "matched_seam_MAE": 7.596,
+      "neighbor_MAE": 4.728
+    },
+    "beam": {
+      "matched_seam_MAE": 9.933,
+      "neighbor_MAE": 2.444
+    },
+    "ground": {
+      "matched_seam_MAE": 5.02,
+      "neighbor_MAE": 0.576
+    }
+  },
+  "2-to-1": {
+    "whole": {
+      "matched_seam_MAE": 2.933,
+      "neighbor_MAE": 0.903
+    },
+    "earth": {
+      "matched_seam_MAE": 9.667,
+      "neighbor_MAE": 6.767
+    },
+    "beam": {
+      "matched_seam_MAE": 10.011,
+      "neighbor_MAE": 1.949
+    },
+    "ground": {
+      "matched_seam_MAE": 4.401,
+      "neighbor_MAE": 0.386
+    }
+  }
+}

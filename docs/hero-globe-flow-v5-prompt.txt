@@ -1,0 +1,27 @@
+Create a continuous eight-second, 16:9 looping animation using the supplied identical START and END images. They represent the same phase of a moving cycle. Earth must complete exactly ONE FULL 360-DEGREE axial rotation between them. This is an accelerated master for later slow-motion playback.
+
+EARTH: FIXED TILTED AXIS, ONE COMPLETE ROTATION
+Preserve the geographic axis indicated by the reference's polar geography and latitude-longitude grid. Its North Pole is in the upper-left part of the globe, clearly left of the vertical beam. Retain that visible tilt, approximately 23.4 degrees left of screen vertical; the reference orientation takes precedence over any numerical adjustment. Keep the axis fixed throughout. Do not straighten it toward the beam or change its orientation.
+
+Rotate the rigid sphere eastward: counterclockwise when viewed from above its OWN NORTH POLE. Maintain constant angular speed of 45 degrees per second, completing 360 degrees in eight seconds. Continents, coastlines, polar ice, city lights and geographic grid rotate together on the same spherical surface. Preserve their shapes and relative positions. This is three-dimensional axial spin, not a flat rotation of the image, orbital movement, texture sliding or morphing.
+
+Rotation checkpoints: 0 seconds = 0 degrees; 2 seconds = 90 degrees; 4 seconds = 180 degrees; 6 seconds = 270 degrees; 8 seconds = 360 degrees. Approximate geographic progression from the reference: Europe/Africa, Americas, Pacific, Asia/Australia, then the original Europe/Africa view. Visibility depends on the starting perspective and fixed floor occlusion; do not reposition continents to force these views. Initially, Europe/Africa move toward the right-hand limb as the Americas enter from the left, following curved paths around the tilted axis. No reversal, rocking, wobble, extra revolution, acceleration, braking or pause at the endpoints.
+
+FIXED CAMERA AND GEOMETRY
+Preserve the reference composition, palette, lighting and empty dark left half. Lock camera position, framing, focus and exposure. Keep the globe's center, radius, silhouette and floor occlusion fixed. The solid floor, horizon, tiles, S-shaped light paths and data-column locations remain stationary. Keep the background specks and atmospheric rim steady. No camera movement, ground deformation, watery ripples, new objects, text, labels or visible axis rods.
+
+ENVIRONMENT: CONTINUOUS EIGHT-SECOND REPEATING PATTERN
+Animate the following effects as repeatable streams already in motion at the start. Their complete visible state repeats at eight seconds, with matching motion across the boundary. No random bursts, particle buildup, gradual brightness change or start-up/shutdown sequence.
+
+MAIN BEAM: Keep the beam vertical and fixed above the same geometric point on the globe's upper silhouette, separate from the tilted geographic North Pole. Earth rotates beneath this fixed contact. Distinct bright packets move DOWNWARD from the top edge toward Earth. Maintain a repeating packet train, stable beam width, base brightness and contact glow. Packets enter from beyond the frame and fade out locally at contact; never reverse or tilt the beam.
+
+GROUND PATHS: Small light packets travel along the existing stationary pathways from the foreground toward the globe. Only the light moves; the S-curve and floor geometry do not shift, bend or change width. Repeat the visible packet arrangement at the loop boundary.
+
+UPWARD DATA: Fine segmented packets rise UPWARD through the existing thin vertical columns around Earth. Ground emission sites stay fixed. Surface-associated visual emitters remain at fixed scene-space locations on the globe's visible envelope while its geographic texture rotates beneath them. Keep column locations and extents stable. Preserve clear separation from the main downward beam.
+
+FREE PARTICLES: Sparse small blue particles rise near the globe and columns on repeatable trajectories. Stagger their emission and use smooth local fade-in and fade-out to recycle them invisibly, maintaining stable density. The visible particle distribution and motion match across the eight-second boundary. No backward travel, visible teleporting, camera-directed motion, large foreground bokeh or particles entering the empty left half.
+
+REFLECTIONS: Each ground reflection follows its own moving source: beam pulses, ground packets, upward data, particles or rotating globe. The combined reflection pattern repeats with the complete eight-second scene. Keep the reflecting floor fixed, with no independent shimmer, waves or global flicker.
+
+SEAMLESS CONTINUITY
+The ongoing motion naturally reaches its initial phase after one complete eight-second cycle. Geography, particles, light packets, reflections and brightness match the supplied endpoint image, with the same velocities and directions continuing into the next repetition. No reset, dissolve, fade-to-black, flash, frozen endpoint, still-image replacement or reverse playback to conceal a mismatch. Keep detail crisp. No audio.

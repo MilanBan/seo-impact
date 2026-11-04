@@ -1,0 +1,22 @@
+V6.1 — UBLAŽEN RUB ZEMLJE
+
+Novi video: hero-globe-v6-1-32s.mp4
+1920 x 1080, 30 fps, 32 sekunde, H.264 CRF 8, bez zvuka.
+
+Uklonjen je uzak i jak emisivni obod koji je izgledao kao nacrtan border.
+Ostaje slabiji, širi atmosferski sjaj, izraženiji na vrhu sfere.
+Smanjeno je dodatno posvetljivanje unutrašnje ivice sfere.
+Uklonjena je ravna svetlosna linija i pravilno raspoređene tačke pri dnu.
+Prelaz Zemlje u prednji plan ublažen je sa 2 na 7 referentnih piksela.
+
+Rotacija, fizički nagib, trajanje, kamera, geografske teksture i periodi
+pokretnih efekata ostaju kao u V6. Originalni V6 video je sačuvan.
+Prethodna verzija izvornog renderera je sačuvana u
+revisions/v6-original/render.py (arhivska kopija; relativne putanje
+do materijala se odnose na originalni direktorijum renderera).
+
+Reprodukcija nove verzije:
+PYTHONPATH=/tmp/seo-v6-pylibs python3 output/hero-globe-v6/render.py --width 1920 --stills --video --name hero-globe-v6-1
+
+Provera kodiranog izvoza:
+PYTHONPATH=/tmp/seo-v6-pylibs python3 output/hero-globe-v6/verify_export.py --name hero-globe-v6-1

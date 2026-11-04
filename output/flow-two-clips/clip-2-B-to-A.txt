@@ -1,0 +1,18 @@
+EIGHT-SECOND CLIP 2 — PACIFIC TO EUROPE/AFRICA
+Use B-pacific.png as the START FRAME and A-europe-africa.jpg as the END FRAME. CONTINUE the same EASTWARD rotation as clip 1; do NOT reverse the earlier movement. From the Pacific view, the Americas leave through the right limb and East Asia enters from the left. Continue through Asia and the Indian Ocean until the original Europe/Africa view is reached. At approximately four seconds Asia should be prominent, subject to the fixed perspective and floor occlusion. Do not retrace the route through the Americas. This completes the second half of one full revolution.
+
+SCENE AND AXIS
+Preserve the source image's sharp cinematic nighttime-Earth appearance, detailed coastlines and city lights, electric-blue palette and dark empty left half. Lock the camera, focus, exposure, globe center, globe size, floor horizon and S-shaped ground paths. Keep the geographic axis fixed in the tilted orientation shown by the reference grid: North Pole toward the upper left, separate from the vertical overhead beam. Do not straighten, wobble or move the axis. Rotate the actual spherical geography and its grid together; no flat image rotation, texture morphing or independently moving continents.
+
+CONTINUOUS ROTATION
+This is one half of a continuous full revolution, not a transition effect. Target exactly 180 degrees of eastward axial rotation over eight seconds, at a constant 22.5 degrees per second. Eastward means counterclockwise when viewed from above Earth's OWN NORTH POLE. Visible surface features move along the tilted spherical paths, generally toward the right-hand limb. The first and last frames are moments of ongoing movement: Earth is already rotating at the start and continues at the same speed at the end. No ease-in, ease-out, pauses, reversing, oscillation, jump to the end image, dissolve, geography replacement or extra turn.
+
+ENVIRONMENTAL MOTION
+Keep the main overhead beam vertical and fixed to the same geometric point on the globe's upper silhouette, NOT its geographic pole. Small distinct bright packets flow DOWNWARD through the beam toward Earth. Keep its base brightness and width stable; no flashes or beam sweep.
+
+Small light packets travel along the EXISTING ground pathways toward the globe. The floor and pathway shapes stay solid and stationary. Thin data packets and sparse small blue particles rise UPWARD from the ground and the globe's visible envelope, on fixed scene-space paths separate from the main beam. Use smooth local particle fade-in/fade-out and steady density, without large foreground particles or drift into the empty left half.
+
+Use continuously repeating light streams, maintaining their speed and direction at both endpoints. Reach the end reference's visible light phase naturally. Match packet positions and brightness at the shared reference frame so the next clip can continue the same motion. Reflections follow their moving light sources; no independent water-like waves, changing ground geometry, accumulation or global flicker.
+
+Keep the footage crisp for later editing: no added motion blur, focus changes, global fades, freeze frames, new objects, text, labels, logos, visible axis rods or audio.
+
