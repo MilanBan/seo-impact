@@ -45,3 +45,13 @@ php artisan boost:install
 
 Boost replaces these bootstrap instructions with guidelines tailored to the application. After installation, read `AGENTS.md` again and continue with the user's original request using the generated guidelines.
 </laravel-boost-guidelines>
+
+<user-scope-rules>
+# Scope Control
+
+- Treat requests about style, visual design, layout, colors, contrast, typography, spacing, or animation as visual-only work.
+- Preserve all existing functionality while applying visual changes. Do not add, remove, enable, disable, or alter features, authentication methods, routes, controllers, models, business logic, stored data, or dependencies unless the user explicitly requests that functional change.
+- A request to make one screen look like another authorizes visual alignment only; it does not authorize removing or changing controls or their behavior.
+- If a visual request appears to require a functional change, explain the proposed functional impact and ask for explicit approval before implementing it.
+- When the requested scope is ambiguous, ask the user before making any functional or behavioral change.
+  </user-scope-rules>

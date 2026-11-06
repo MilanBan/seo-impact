@@ -1,0 +1,46 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@layer base {
+    body {
+        cursor: default;
+    }
+
+    :where(
+        a[href],
+        button:not(:disabled),
+        [role='button']:not([aria-disabled='true']),
+        summary,
+        label[for],
+        select:not(:disabled),
+        input[type='button']:not(:disabled),
+        input[type='submit']:not(:disabled),
+        input[type='reset']:not(:disabled),
+        input[type='checkbox']:not(:disabled),
+        input[type='radio']:not(:disabled),
+        input[type='file']:not(:disabled),
+        input[type='color']:not(:disabled),
+        input[type='range']:not(:disabled)
+    ) {
+        cursor: pointer;
+    }
+
+    :where(
+        input:not([type]),
+        input[type='text'],
+        input[type='email'],
+        input[type='password'],
+        input[type='search'],
+        input[type='tel'],
+        input[type='url'],
+        input[type='number'],
+        textarea,
+        [contenteditable]:not([contenteditable='false']),
+        [role='textbox'],
+        .ProseMirror
+    ) {
+        cursor: text;
+    }
+}

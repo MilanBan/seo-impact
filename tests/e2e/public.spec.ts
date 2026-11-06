@@ -101,6 +101,10 @@ test('desktop hero plays the globe video while cards and layout stay stable', as
 
     const video = page.locator('.hero-video');
     await expect(video).toHaveClass(/hero-video--ready/);
+    await expect(video).toHaveAttribute(
+        'src',
+        '/videos/brand/hero-globe-loop-optimized-900p.mp4',
+    );
     await expect
         .poll(() =>
             video.evaluate((element: HTMLVideoElement) => element.currentTime),
@@ -286,6 +290,56 @@ test('hero video can pause and resume, and follows reduced motion changes', asyn
     await expect(page.locator('.hero-video-toggle')).toHaveCount(0);
 });
 
+test('data saver and offscreen playback conserve hero bandwidth', async ({
+    browser,
+}) => {
+    const saverContext = await browser.newContext({
+        viewport: { width: 1440, height: 900 },
+    });
+    await saverContext.addInitScript(() => {
+        Object.defineProperty(navigator, 'connection', {
+            configurable: true,
+            value: {
+                saveData: true,
+                addEventListener() {},
+                removeEventListener() {},
+            },
+        });
+    });
+    const saverPage = await saverContext.newPage();
+    const videoRequests: string[] = [];
+    saverPage.on('request', (request) => {
+        if (request.url().includes('/videos/brand/')) {
+            videoRequests.push(request.url());
+        }
+    });
+    await saverPage.goto('/en');
+    await expect(saverPage.locator('.hero-video')).toHaveCount(0);
+    await expect(saverPage.locator('.hero-poster img')).toBeVisible();
+    expect(videoRequests).toEqual([]);
+    await saverContext.close();
+
+    const page = await browser.newPage({
+        viewport: { width: 1440, height: 900 },
+    });
+    await page.goto('/en');
+    const video = page.locator('.hero-video');
+    await expect(video).toHaveClass(/hero-video--ready/);
+    await page.locator('.services-section').scrollIntoViewIfNeeded();
+    await expect
+        .poll(() =>
+            video.evaluate((element: HTMLVideoElement) => element.paused),
+        )
+        .toBe(true);
+    await page.locator('.hero-section').scrollIntoViewIfNeeded();
+    await expect
+        .poll(() =>
+            video.evaluate((element: HTMLVideoElement) => element.paused),
+        )
+        .toBe(false);
+    await page.close();
+});
+
 test('hero retains the original picture if the video cannot load', async ({
     page,
 }) => {
@@ -293,23 +347,57 @@ test('hero retains the original picture if the video cannot load', async ({
     await page.goto('/en');
     await expect(page.locator('.hero-video')).toHaveCount(0);
     await expect(page.locator('.hero-poster img')).toBeVisible();
-    await expect(page.locator('.hero-beam')).toBeVisible();
+    await expect(page.locator('.hero-beam')).toHaveCount(0);
 });
 
-test('mobile hero plays inline without horizontal overflow', async ({
+test('mobile hero uses a static fallback without overlap or overflow', async ({
     page,
 }, testInfo) => {
+    const videoRequests: string[] = [];
+    page.on('request', (request) => {
+        if (request.url().includes('/videos/brand/')) {
+            videoRequests.push(request.url());
+        }
+    });
+
+    for (const locale of ['en', 'sr', 'de']) {
+        for (const width of [320, 360, 390]) {
+            await page.setViewportSize({ width, height: 844 });
+            await page.goto(`/${locale}`);
+            await expect(page.locator('.hero-poster img')).toBeVisible();
+            await expect(page.locator('.hero-video')).toHaveCount(0);
+            await expect(page.locator('.hero-video-toggle')).toHaveCount(0);
+            await expect(page.locator('.hero-atmosphere')).toHaveCount(0);
+
+            const geometry = await page.evaluate(() => {
+                const proof = document.querySelector('.proof-row');
+                const stats = document.querySelector('.hero-stats');
+                if (!proof || !stats) return null;
+
+                const proofRect = proof.getBoundingClientRect();
+                const statsRect = stats.getBoundingClientRect();
+                return {
+                    proofBottom: proofRect.bottom,
+                    statsTop: statsRect.top,
+                    scrollWidth: document.documentElement.scrollWidth,
+                };
+            });
+
+            expect(geometry).not.toBeNull();
+            expect(geometry!.statsTop).toBeGreaterThanOrEqual(
+                geometry!.proofBottom,
+            );
+            expect(geometry!.scrollWidth).toBeLessThanOrEqual(width);
+        }
+    }
+
+    expect(videoRequests).toEqual([]);
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/sr');
-    await expect(page.locator('.hero-video')).toHaveClass(/hero-video--ready/);
-    await expect(
-        page.getByRole('button', { name: 'Pauziraj animaciju' }),
-    ).toBeVisible();
-    expect(
-        await page.evaluate(() => document.documentElement.scrollWidth),
-    ).toBeLessThanOrEqual(390);
-    await page.waitForTimeout(1_500);
+    await page.goto('/de');
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.evaluate(() => document.fonts.ready);
+    await page.waitForTimeout(1_700);
     await page.screenshot({
-        path: testInfo.outputPath('hero-video-mobile.png'),
+        path: testInfo.outputPath('hero-static-mobile.png'),
     });
 });

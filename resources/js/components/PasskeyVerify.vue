@@ -16,6 +16,7 @@ type Props = {
     label?: string;
     loadingLabel?: string;
     separator?: string;
+    appearance?: 'default' | 'portal-dark';
 };
 
 const props = defineProps<Props>();
@@ -41,12 +42,23 @@ const { verify, isLoading, error, isSupported } = usePasskeyVerify({
             <Button
                 type="button"
                 variant="outline"
-                class="w-full"
+                :class="[
+                    'w-full',
+                    appearance === 'portal-dark'
+                        ? 'h-11 cursor-pointer rounded-lg border-white/20 bg-white/[0.06] text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-[border-color,background-color,color,box-shadow] duration-200 hover:border-blue-400/55 hover:bg-blue-500/12 hover:text-blue-100 hover:shadow-[0_0_0_1px_rgba(59,130,246,0.1)] focus-visible:border-blue-400 focus-visible:ring-2 focus-visible:ring-blue-500/30 active:bg-blue-500/15 disabled:cursor-wait disabled:opacity-60'
+                        : '',
+                ]"
                 @click="verify"
                 :disabled="isLoading"
             >
                 <Spinner v-if="isLoading" />
-                <KeyRound v-else class="h-4 w-4" />
+                <KeyRound
+                    v-else
+                    :class="[
+                        'h-4 w-4',
+                        appearance === 'portal-dark' ? 'text-blue-400' : '',
+                    ]"
+                />
                 {{
                     isLoading
                         ? (props.loadingLabel ?? 'Authenticating...')
@@ -59,12 +71,36 @@ const { verify, isLoading, error, isSupported } = usePasskeyVerify({
             </div>
         </div>
 
-        <div class="relative my-6">
+        <div
+            :class="[
+                'relative',
+                appearance === 'portal-dark' ? 'my-5' : 'my-6',
+            ]"
+        >
             <div class="absolute inset-0 flex items-center">
-                <Separator class="w-full" />
+                <Separator
+                    :class="[
+                        'w-full',
+                        appearance === 'portal-dark' ? 'bg-white/15' : '',
+                    ]"
+                />
             </div>
-            <div class="relative flex justify-center text-xs uppercase">
-                <span class="bg-background text-muted-foreground px-2">
+            <div
+                :class="[
+                    'relative flex justify-center text-xs uppercase',
+                    appearance === 'portal-dark'
+                        ? 'font-medium tracking-[0.08em] text-zinc-400'
+                        : '',
+                ]"
+            >
+                <span
+                    :class="[
+                        'px-3',
+                        appearance === 'portal-dark'
+                            ? 'bg-[#18181b] text-zinc-400'
+                            : 'bg-background text-muted-foreground',
+                    ]"
+                >
                     {{ props.separator ?? 'Or continue with email' }}
                 </span>
             </div>

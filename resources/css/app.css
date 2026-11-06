@@ -243,7 +243,8 @@ button:focus-visible {
     font-size: 0.7rem;
 }
 .menu-toggle,
-.mobile-nav {
+.mobile-nav,
+.mobile-language-switcher {
     display: none;
 }
 
@@ -253,6 +254,10 @@ button:focus-visible {
     min-height: min(850px, calc(100vh - 20px));
     overflow: hidden;
     border-bottom: 1px solid var(--line);
+}
+.hero-media {
+    position: absolute;
+    inset: 0;
 }
 .hero-grid {
     position: absolute;
@@ -952,7 +957,13 @@ button:focus-visible {
     gap: 7rem;
     align-items: center;
 }
+.results-section > *,
+.results-content {
+    min-width: 0;
+}
 .results-orbit {
+    --orbit-radius: 185px;
+
     position: relative;
     display: grid;
     place-items: center;
@@ -1158,10 +1169,11 @@ button:focus-visible {
 }
 @keyframes orbit-dot {
     from {
-        transform: rotate(0deg) translateX(185px) rotate(0deg);
+        transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
     }
     to {
-        transform: rotate(360deg) translateX(185px) rotate(-360deg);
+        transform: rotate(360deg) translateX(var(--orbit-radius))
+            rotate(-360deg);
     }
 }
 @keyframes cta-glow {
@@ -1815,8 +1827,13 @@ button:focus-visible {
     }
     .menu-toggle {
         display: grid;
+        place-content: center;
         gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
         border: 0;
+        border-radius: 50%;
         background: none;
     }
     .menu-toggle span {
@@ -1836,6 +1853,19 @@ button:focus-visible {
         padding: 1.5rem;
         border: 1px solid var(--line);
         background: rgba(3, 9, 21, 0.97);
+    }
+    .mobile-nav > a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 0.75rem;
+        border-radius: 6px;
+        color: #dce6f7;
+    }
+    .mobile-nav > a:hover,
+    .mobile-nav > a:focus-visible {
+        background: rgba(79, 141, 255, 0.1);
+        color: white;
     }
     .hero-visual {
         left: 25%;
@@ -1867,12 +1897,40 @@ button:focus-visible {
     .language-switcher {
         display: none;
     }
+    .mobile-language-switcher {
+        display: flex;
+        gap: 0.6rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--line);
+    }
+    .mobile-language-switcher a {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(126, 167, 227, 0.24);
+        border-radius: 50%;
+        color: #91a1ba;
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+    }
+    .mobile-language-switcher a:hover,
+    .mobile-language-switcher a:focus-visible,
+    .mobile-language-switcher a.active {
+        border-color: rgba(100, 174, 255, 0.72);
+        background: rgba(45, 112, 255, 0.14);
+        color: white;
+    }
     .hero-section {
-        min-height: 830px;
+        min-height: 0;
     }
     .hero-visual {
         inset: 9rem -20% 19rem 8%;
         opacity: 0.58;
+    }
+    .hero-poster img {
+        object-position: 70% center;
     }
     .hero-visual::after {
         background: linear-gradient(
@@ -1884,6 +1942,7 @@ button:focus-visible {
     }
     .hero-copy {
         padding-top: 4.5rem;
+        padding-bottom: 2.25rem;
     }
     .hero-copy h1 {
         font-size: clamp(3.2rem, 16vw, 5rem);
@@ -1900,8 +1959,13 @@ button:focus-visible {
         gap: 0.75rem 1rem;
     }
     .hero-stats {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        left: auto;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem 0;
+        padding: 1.6rem 0 2rem;
     }
     .hero-stats > div:nth-child(3) {
         padding-left: 0;
@@ -1927,7 +1991,11 @@ button:focus-visible {
     }
     .results-orbit,
     .story-visual {
+        width: 100%;
         min-height: 330px;
+    }
+    .results-orbit {
+        --orbit-radius: min(36vw, 130px);
     }
     .case-panel,
     .case-panel--large {
@@ -2092,5 +2160,40 @@ button:focus-visible {
     }
     body {
         @apply bg-background text-foreground;
+        cursor: default;
+    }
+    :where(
+        a[href],
+        button:not(:disabled),
+        [role='button']:not([aria-disabled='true']),
+        summary,
+        label[for],
+        select:not(:disabled),
+        input[type='button']:not(:disabled),
+        input[type='submit']:not(:disabled),
+        input[type='reset']:not(:disabled),
+        input[type='checkbox']:not(:disabled),
+        input[type='radio']:not(:disabled),
+        input[type='file']:not(:disabled),
+        input[type='color']:not(:disabled),
+        input[type='range']:not(:disabled)
+    ) {
+        cursor: pointer;
+    }
+    :where(
+        input:not([type]),
+        input[type='text'],
+        input[type='email'],
+        input[type='password'],
+        input[type='search'],
+        input[type='tel'],
+        input[type='url'],
+        input[type='number'],
+        textarea,
+        [contenteditable]:not([contenteditable='false']),
+        [role='textbox'],
+        .ProseMirror
+    ) {
+        cursor: text;
     }
 }

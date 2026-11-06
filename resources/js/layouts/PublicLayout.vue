@@ -93,6 +93,17 @@ const navigation = computed(() => ['services', 'ai', 'cases', 'about', 'blog']);
                 <Link :href="routeUrl('contact')" @click="menuOpen = false">{{
                     copy.nav.contact
                 }}</Link>
+                <div class="mobile-language-switcher" aria-label="Language">
+                    <a
+                        v-for="(href, code) in seo.alternates"
+                        :key="code"
+                        :href="href"
+                        :class="{ active: code === locale }"
+                        :hreflang="code"
+                        :aria-current="code === locale ? 'page' : undefined"
+                        >{{ localeLabels[code] }}</a
+                    >
+                </div>
             </nav>
         </header>
 
